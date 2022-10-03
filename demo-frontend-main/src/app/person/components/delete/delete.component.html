@@ -1,26 +1,18 @@
 <mat-card>
   <mat-card-title>
-    Modificar Persona
+    Eliminar Persona
   </mat-card-title>
   <mat-card-content>
     <div class="form-content" [formGroup]="formPerson">
-      <div class="form-control-group">
+      <div class="form-control-group"> 
         <mat-form-field appearance="outline">
-          <mat-label>Nombre</mat-label>
-          <input matInput formControlName="name">
-        </mat-form-field>
-        <mat-form-field appearance="outline">
-          <mat-label>Apellidos</mat-label>
-          <input matInput formControlName="lastname">
-        </mat-form-field>
-        <mat-form-field appearance="outline">
-          <mat-label>Tipo de Documento</mat-label>
+          <mat-label>Ingrese el tipo de Documento</mat-label>
           <mat-select formControlName="documentTypeId">
             <mat-option *ngFor="let type of documentTypes" [value]="type.id">{{type.shortName}}</mat-option>
           </mat-select>
         </mat-form-field>
         <mat-form-field appearance="outline">2
-          <mat-label>Numero de Documento</mat-label>
+          <mat-label>Ingrese el numero de documento de la persona a eliminar</mat-label>
           <input matInput formControlName="documentNumber">
         </mat-form-field>
       </div>
